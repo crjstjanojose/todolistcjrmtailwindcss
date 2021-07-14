@@ -52,9 +52,12 @@ const addTodo = (event) => {
 
 const deleteTodo = (event) => {
   const clickedElement = event.target;
-  if (Array.from(clickedElement.classList).includes("delete")) {
-    clickedElement.parentElement.remove();
+  console.log(clickedElement);
+
+  if (!clickedElement.closest(".delete")) {
+    return;
   }
+  clickedElement.closest("li").remove();
 };
 
 const filterTodo = (event) => {
