@@ -52,7 +52,6 @@ const addTodo = (event) => {
 
 const deleteTodo = (event) => {
   const clickedElement = event.target;
-  console.log(clickedElement);
 
   if (!clickedElement.closest(".delete")) {
     return;
